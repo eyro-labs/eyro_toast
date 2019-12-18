@@ -1,6 +1,6 @@
 //
-//  FlutterToastData.h
-//  flutter_toast
+//  EyroToastData.h
+//  eyro_toast
 //
 //  Created by Alann Maulana on 05/11/19.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlutterToastData : NSObject
+@interface EyroToastData : NSObject
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSNumber *duration;

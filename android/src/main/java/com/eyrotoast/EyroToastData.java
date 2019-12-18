@@ -1,9 +1,6 @@
-package com.fluttertoast;
+package com.eyrotoast;
 
 import android.widget.Toast;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -12,16 +9,16 @@ import java.util.Map;
  * Date: 2019-11-05
  * Time: 21:07
  */
-class FlutterToastData {
+class EyroToastData {
   private String text;
   private int duration;
 
-  FlutterToastData(String text, int duration) {
+  EyroToastData(String text, int duration) {
     this.text = text;
     this.duration = duration;
   }
 
-  static FlutterToastData fromObject(Object arg) {
+  static EyroToastData fromObject(Object arg) {
     if (arg instanceof Map) {
       Map map = (Map) arg;
       String text = "";
@@ -33,7 +30,7 @@ class FlutterToastData {
       if (map.get("duration") instanceof Integer) {
         duration = (int) map.get("duration");
       }
-      return new FlutterToastData(
+      return new EyroToastData(
           text,
           duration
       );

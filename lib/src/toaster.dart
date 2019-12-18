@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_toast/src/toast_duration.dart';
-import 'package:flutter_toast/src/toast_gravity.dart';
-import 'package:flutter_toast/src/toast_view.dart';
+
+import 'toast_duration.dart';
+import 'toast_gravity.dart';
+import 'toast_view.dart';
 
 Future<bool> showToaster({
   @required String text,
@@ -38,10 +39,10 @@ Future<bool> showToaster({
   return true;
 }
 
-class FlutterToastSetup {
-  static final FlutterToastSetup shared = FlutterToastSetup._internal();
+class EyroToastSetup {
+  static final EyroToastSetup shared = EyroToastSetup._internal();
 
-  FlutterToastSetup._internal();
+  EyroToastSetup._internal();
 
   GlobalKey<NavigatorState> navigatorKey;
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_toast/flutter_toast.dart';
-import 'package:flutter_toast/src/toast_gravity.dart';
-import 'package:flutter_toast/src/toast_widget.dart';
+
+import 'toast_duration.dart';
+import 'toast_gravity.dart';
+import 'toast_widget.dart';
+import 'toaster.dart';
 
 class ToastView {
   static final ToastView shared = ToastView._internal();
@@ -25,10 +27,10 @@ class ToastView {
     EdgeInsets padding,
   ]) {
     assert(
-        FlutterToastSetup.shared.navigatorKey != null,
+        EyroToastSetup.shared.navigatorKey != null,
         "You need to initialize and set [FlutterToastSetup.shared.navigatorKey] "
         "as your WidgetApp#navigatorKey before using Toaster");
-    _overlayState = FlutterToastSetup.shared.navigatorKey.currentState.overlay;
+    _overlayState = EyroToastSetup.shared.navigatorKey.currentState.overlay;
 
     _overlayEntry = OverlayEntry(
       builder: (BuildContext context) => ToastWidget(

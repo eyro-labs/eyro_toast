@@ -1,13 +1,13 @@
 //
-//  FlutterToastData.m
-//  flutter_toast
+//  EyroToastData.m
+//  eyro_toast
 //
 //  Created by Alann Maulana on 05/11/19.
 //
 
-#import "FlutterToastData.h"
+#import "EyroToastData.h"
 
-@implementation FlutterToastData
+@implementation EyroToastData
 
 -(instancetype) initWithObject:(id)object {
     if (self = [super init]) {
