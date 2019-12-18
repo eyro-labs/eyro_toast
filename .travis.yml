@@ -28,11 +28,13 @@ after_success:
 deploy:
   # validating branch master for deploying
   - provider: script
+    skip_cleanup: true
     script: bash scripts/deploy.sh -n
     on:
       branch: master
   # deploy tagged to pub server
   - provider: script
+    skip_cleanup: true
     script: bash scripts/deploy.sh -f
     on:
       tags: true
