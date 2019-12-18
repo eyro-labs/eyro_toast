@@ -24,3 +24,15 @@ script:
   - make
 after_success:
   - coveralls-lcov --repo-token $COVERALLS_TOKEN coverage/lcov.info
+
+deploy:
+  # validating branch master for deploying
+  - provider: script
+    script: bash scripts/deploy.sh -n
+    on:
+      branch: master
+  # deploy tagged to pub server
+  - provider: script
+    script: bash scripts/deploy.sh -f
+    on:
+      tags: true
