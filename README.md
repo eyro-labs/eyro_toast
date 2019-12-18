@@ -59,4 +59,4 @@ await showToaster(
 
 ## Author
 
-Flutter HUD plugin is developed by Eyro Labs. You can contact us at <admin@cubeacon.com>.
+Flutter Toast plugin is developed by Eyro Labs. You can contact us at <admin@cubeacon.com>.
