@@ -1,10 +1,10 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_toast/flutter_toast.dart';
+import 'package:eyro_toast/eyro_toast.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  const MethodChannel channel = MethodChannel('flutter_toast');
+  const MethodChannel channel = MethodChannel('eyro_toast');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
@@ -31,7 +31,7 @@ void main() {
 
   test('showToast with text arguments return "true"', () async {
     expect(
-      await FlutterToast.showToast(
+      await EyroToast.showToast(
         text: 'Show toast',
       ),
       true,
@@ -40,7 +40,7 @@ void main() {
 
   test('showToast with text and duration arguments return "true"', () async {
     expect(
-      await FlutterToast.showToast(
+      await EyroToast.showToast(
         text: 'Show toast',
         duration: ToastDuration.long,
       ),
@@ -50,7 +50,7 @@ void main() {
 
   test('showToast without text arguments return "false"', () async {
     expect(
-      await FlutterToast.showToast(text: null),
+      await EyroToast.showToast(text: null),
       false,
     );
   });

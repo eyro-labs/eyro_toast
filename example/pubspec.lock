@@ -63,7 +63,14 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.2"
+    version: "0.1.3"
+  eyro_toast:
+    dependency: "direct dev"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.1.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -74,13 +81,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_toast:
-    dependency: "direct dev"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.1.0"
   image:
     dependency: transitive
     description:

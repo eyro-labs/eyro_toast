@@ -1,27 +1,27 @@
 PODS:
-  - Flutter (1.0.0)
-  - flutter_toast (0.1.0):
+  - eyro_toast (0.1.0):
     - Flutter
     - Toast
+  - Flutter (1.0.0)
   - Toast (4.0.0)
 
 DEPENDENCIES:
+  - eyro_toast (from `.symlinks/plugins/eyro_toast/ios`)
   - Flutter (from `Flutter`)
-  - flutter_toast (from `.symlinks/plugins/flutter_toast/ios`)
 
 SPEC REPOS:
   trunk:
     - Toast
 
 EXTERNAL SOURCES:
+  eyro_toast:
+    :path: ".symlinks/plugins/eyro_toast/ios"
   Flutter:
     :path: Flutter
-  flutter_toast:
-    :path: ".symlinks/plugins/flutter_toast/ios"
 
 SPEC CHECKSUMS:
+  eyro_toast: b0faa8d790ab8d8e8a3bce717c5922e87de6a18c
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_toast: 6b878e9774d9c6245a79a0698893d43f0867a2ea
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
 PODFILE CHECKSUM: 3dbe063e9c90a5d7c9e4e76e70a821b9e2c1d271

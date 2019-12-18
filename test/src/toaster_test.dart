@@ -1,11 +1,11 @@
+import 'package:eyro_toast/eyro_toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_toast/flutter_toast.dart';
 
 main() {
-  test('FlutterToastSetup', () {
-    final shared = FlutterToastSetup.shared;
+  test('EyroToastSetup', () {
+    final shared = EyroToastSetup.shared;
     expect(shared, isNotNull);
     expect(shared.navigatorKey, isNull);
 
@@ -15,9 +15,9 @@ main() {
 
   testWidgets('showToaster', (WidgetTester tester) async {
     bool flag;
-    FlutterToastSetup.shared.navigatorKey = GlobalKey();
+    EyroToastSetup.shared.navigatorKey = GlobalKey();
     await tester.pumpWidget(MaterialApp(
-      navigatorKey: FlutterToastSetup.shared.navigatorKey,
+      navigatorKey: EyroToastSetup.shared.navigatorKey,
       home: Scaffold(
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.share),

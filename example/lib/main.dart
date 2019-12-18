@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_toast/flutter_toast.dart';
+import 'package:eyro_toast/eyro_toast.dart';
 
 void main() {
-  FlutterToastSetup.shared.navigatorKey = GlobalKey<NavigatorState>();
+  EyroToastSetup.shared.navigatorKey = GlobalKey<NavigatorState>();
   runApp(MyApp());
 }
 
@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       // don't forget to set the global navigator key
       // if you're using pure Flutter Toaster
-      navigatorKey: FlutterToastSetup.shared.navigatorKey,
+      navigatorKey: EyroToastSetup.shared.navigatorKey,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Flutter Toast'),
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
               subtitle: Text('Show toast for a short 2 seconds time'),
               trailing: Icon(Icons.chevron_right),
               onTap: () async {
-                await FlutterToast.showToast(
+                await EyroToast.showToast(
                   text: 'This is short toast',
                   duration: ToastDuration.short,
                 );
@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
               subtitle: Text('Show toast for a long 3.5 seconds time'),
               trailing: Icon(Icons.chevron_right),
               onTap: () async {
-                await FlutterToast.showToast(
+                await EyroToast.showToast(
                   text: 'This is long toast',
                   duration: ToastDuration.long,
                 );

@@ -1,9 +1,9 @@
-package com.fluttertoast;
+// Copyright (c) 2019, the Eyro Toast project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// MIT license that can be found in the LICENSE file.
+package com.eyrotoast;
 
 import android.widget.Toast;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -12,16 +12,16 @@ import java.util.Map;
  * Date: 2019-11-05
  * Time: 21:07
  */
-class FlutterToastData {
+class EyroToastData {
   private String text;
   private int duration;
 
-  FlutterToastData(String text, int duration) {
+  EyroToastData(String text, int duration) {
     this.text = text;
     this.duration = duration;
   }
 
-  static FlutterToastData fromObject(Object arg) {
+  static EyroToastData fromObject(Object arg) {
     if (arg instanceof Map) {
       Map map = (Map) arg;
       String text = "";
@@ -33,7 +33,7 @@ class FlutterToastData {
       if (map.get("duration") instanceof Integer) {
         duration = (int) map.get("duration");
       }
-      return new FlutterToastData(
+      return new EyroToastData(
           text,
           duration
       );

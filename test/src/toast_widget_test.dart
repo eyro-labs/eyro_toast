@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_toast/flutter_toast.dart';
-import 'package:flutter_toast/src/toast_widget.dart';
+import 'package:eyro_toast/eyro_toast.dart';
+import 'package:eyro_toast/src/toast_widget.dart';
 
 main() {
   testWidgets('Toast widget bottom', (WidgetTester tester) async {

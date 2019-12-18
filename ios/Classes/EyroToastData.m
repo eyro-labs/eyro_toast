@@ -1,13 +1,12 @@
 //
-//  FlutterToastData.m
-//  flutter_toast
-//
-//  Created by Alann Maulana on 05/11/19.
+// Copyright (c) 2019, the Eyro Toast project authors.  Please see the AUTHORS file
+// for details. All rights reserved. Use of this source code is governed by a
+// MIT license that can be found in the LICENSE file.
 //
 
-#import "FlutterToastData.h"
+#import "EyroToastData.h"
 
-@implementation FlutterToastData
+@implementation EyroToastData
 
 -(instancetype) initWithObject:(id)object {
     if (self = [super init]) {

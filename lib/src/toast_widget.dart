@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_toast/flutter_toast.dart';
+
+import 'toast_gravity.dart';
 
 /// Widget class for setting up the position of Toast
 class ToastWidget extends StatelessWidget {

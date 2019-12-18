@@ -1,4 +1,4 @@
-name: flutter_toast_example
+name: eyro_toast_example
 description: Demonstrates how to use the flutter_toast plugin.
 publish_to: 'none'
 
@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_toast:
+  eyro_toast:
     path: ../
 
 # For information on the generic Dart part of this file, see the

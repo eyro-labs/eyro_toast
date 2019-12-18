@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_toast/flutter_toast.dart';
+import 'package:eyro_toast/eyro_toast.dart';
 
 void main() {
   test('Toast gravity top value equalTo "2"', () async {
