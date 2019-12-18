@@ -1,0 +1,21 @@
+name: flutter_toast
+description: A simple yet powerful Flutter plugin for showing Toast at Android, iOS and Web.
+version: 0.1.0
+author: Eyro Labs <admin@cubeacon.com>
+homepage: https://github.com/eyro-labs/flutter_toast
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.fluttertoast
+    pluginClass: FlutterToastPlugin
