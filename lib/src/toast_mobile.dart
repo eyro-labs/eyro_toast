@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'toast_duration.dart';
+import 'toaster.dart';
 
 /// Class with static method for showing Toast at platform specific channel.
 class Toast {
@@ -14,9 +15,13 @@ class Toast {
     @required String text,
     ToastDuration duration = ToastDuration.short,
   }) async {
-    return await _channel.invokeMethod('showToast', {
-      'text': text,
-      'duration': duration.value,
-    });
+    try {
+      return await _channel.invokeMethod('showToast', {
+        'text': text,
+        'duration': duration.value,
+      });
+    } on MissingPluginException catch (_) {
+      return await showToaster(text: text, duration: duration);
+    }
   }
 }
