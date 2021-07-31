@@ -28,3 +28,5 @@ flutter:
       web:
         pluginClass: EyroToastWeb
         fileName: eyro_toast_web.dart
+      macos:
+        pluginClass: EyroToastPlugin
