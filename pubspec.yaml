@@ -32,3 +32,5 @@ flutter:
         pluginClass: EyroToastPlugin
       windows:
         pluginClass: EyroToastPlugin
+      linux:
+        pluginClass: EyroToastPlugin
