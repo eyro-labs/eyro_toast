@@ -14,7 +14,7 @@ main() {
   });
 
   testWidgets('showToaster', (WidgetTester tester) async {
-    bool flag;
+    bool? flag;
     EyroToastSetup.shared.navigatorKey = GlobalKey();
     await tester.pumpWidget(MaterialApp(
       navigatorKey: EyroToastSetup.shared.navigatorKey,

@@ -47,11 +47,4 @@ void main() {
       true,
     );
   });
-
-  test('showToast without text arguments return "false"', () async {
-    expect(
-      await EyroToast.showToast(text: null),
-      false,
-    );
-  });
 }

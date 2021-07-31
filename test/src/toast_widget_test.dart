@@ -25,7 +25,7 @@ main() {
     expect(textFinder, findsOneWidget);
     expect(positionedFinder, findsOneWidget);
 
-    Positioned positioned;
+    Positioned? positioned;
     for (int i = 0; i < tester.allWidgets.length; i++) {
       final widget = tester.allWidgets.elementAt(i);
       if (widget is Positioned) {
@@ -59,7 +59,7 @@ main() {
     expect(textFinder, findsOneWidget);
     expect(positionedFinder, findsOneWidget);
 
-    Positioned positioned;
+    Positioned? positioned;
     for (int i = 0; i < tester.allWidgets.length; i++) {
       final widget = tester.allWidgets.elementAt(i);
       if (widget is Positioned) {
@@ -93,7 +93,7 @@ main() {
     expect(textFinder, findsOneWidget);
     expect(positionedFinder, findsOneWidget);
 
-    Positioned positioned;
+    Positioned? positioned;
     for (int i = 0; i < tester.allWidgets.length; i++) {
       final widget = tester.allWidgets.elementAt(i);
       if (widget is Positioned) {
