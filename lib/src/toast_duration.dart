@@ -4,7 +4,7 @@ class ToastDuration {
   const ToastDuration(this.duration, [this.value]);
 
   /// Value tag for native internally use duration
-  final int value;
+  final int? value;
 
   /// Duration value in milliseconds
   final int duration;

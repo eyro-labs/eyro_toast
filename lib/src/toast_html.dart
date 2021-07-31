@@ -1,8 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
-
 import 'toast_duration.dart';
 import 'toaster.dart';
 
@@ -10,7 +7,7 @@ import 'toaster.dart';
 class Toast {
   /// Calling showToast using pure Flutter method at Web platform
   static Future<bool> showToast({
-    @required String text,
+    required String text,
     ToastDuration duration = ToastDuration.short,
   }) async {
     return await showToaster(text: text, duration: duration);

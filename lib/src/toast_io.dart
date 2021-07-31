@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import 'toast_duration.dart';
@@ -11,8 +10,9 @@ class Toast {
   static const MethodChannel _channel = const MethodChannel('eyro_toast');
 
   /// Calling native showToast method at Android and iOS
+  /// Calling pure dart toast on MacOS, Windows and Linux
   static Future<bool> showToast({
-    @required String text,
+    required String text,
     ToastDuration duration = ToastDuration.short,
   }) async {
     try {

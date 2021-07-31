@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 import 'toast_duration.dart';
@@ -8,7 +7,7 @@ import 'toast_gravity.dart';
 import 'toast_view.dart';
 
 Future<bool> showToaster({
-  @required String text,
+  required String text,
   ToastDuration duration = ToastDuration.short,
   ToastGravity gravity = ToastGravity.bottom,
   BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16)),
@@ -20,7 +19,7 @@ Future<bool> showToaster({
     horizontal: 16,
     vertical: 12,
   ),
-  Border border,
+  Border? border,
 }) async {
   ToastView.shared.dismiss();
   await ToastView.shared
@@ -44,5 +43,5 @@ class EyroToastSetup {
 
   EyroToastSetup._internal();
 
-  GlobalKey<NavigatorState> navigatorKey;
+  GlobalKey<NavigatorState>? navigatorKey;
 }

@@ -5,9 +5,9 @@ import 'toast_gravity.dart';
 /// Widget class for setting up the position of Toast
 class ToastWidget extends StatelessWidget {
   ToastWidget({
-    Key key,
-    @required this.widget,
-    @required this.gravity,
+    Key? key,
+    required this.widget,
+    required this.gravity,
   }) : super(key: key);
 
   /// The widget of Toast to show

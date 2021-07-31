@@ -11,26 +11,27 @@ class ToastView {
 
   ToastView._internal();
 
-  OverlayState _overlayState;
-  OverlayEntry _overlayEntry;
+  OverlayState? _overlayState;
+  OverlayEntry? _overlayEntry;
   bool _isVisible = false;
 
   ToastView create(
     String text, [
-    ToastGravity gravity,
-    Border border,
-    BorderRadius borderRadius,
-    Color backgroundColor,
-    Color fontColor,
-    TextAlign textAlign,
-    EdgeInsets margin,
-    EdgeInsets padding,
+    ToastGravity gravity = ToastGravity.bottom,
+    Border? border,
+    BorderRadius? borderRadius,
+    Color? backgroundColor,
+    Color? fontColor,
+    TextAlign? textAlign,
+    EdgeInsets? margin,
+    EdgeInsets? padding,
   ]) {
+    final key = EyroToastSetup.shared.navigatorKey;
     assert(
-        EyroToastSetup.shared.navigatorKey != null,
+        key != null,
         "You need to initialize and set [FlutterToastSetup.shared.navigatorKey] "
         "as your WidgetApp#navigatorKey before using Toaster");
-    _overlayState = EyroToastSetup.shared.navigatorKey.currentState.overlay;
+    _overlayState = key!.currentState!.overlay;
 
     _overlayEntry = OverlayEntry(
       builder: (BuildContext context) => ToastWidget(
@@ -48,7 +49,7 @@ class ToastView {
               margin: margin,
               padding: padding,
               child: DefaultTextStyle(
-                style: Theme.of(context).textTheme.body1,
+                style: Theme.of(context).textTheme.bodyText2!,
                 child: Text(
                   text,
                   textAlign: textAlign,
@@ -68,7 +69,7 @@ class ToastView {
     return this;
   }
 
-  Future<void> show([ToastDuration duration]) async {
+  Future<void> show([ToastDuration? duration]) async {
     await showOnly();
     await Future.delayed(
       Duration(
@@ -80,11 +81,11 @@ class ToastView {
   @visibleForTesting
   Future<void> showOnly() async {
     assert(
-      _overlayState != null,
+      _overlayState != null && _overlayEntry != null,
       'invoke ToastView#create first before showing it',
     );
     _isVisible = true;
-    _overlayState.insert(_overlayEntry);
+    _overlayState!.insert(_overlayEntry!);
   }
 
   void dismiss() {

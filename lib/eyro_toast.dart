@@ -7,12 +7,10 @@ library eyro_toast;
 
 import 'dart:async';
 
-import 'package:flutter/foundation.dart';
-
 import 'src/toast_duration.dart';
-import 'src/toast_unsupported.dart'
-    if (dart.library.io) 'src/toast_mobile.dart'
-    if (dart.library.html) 'src/toast_web.dart';
+import 'src/toast_stub.dart'
+    if (dart.library.io) 'src/toast_io.dart'
+    if (dart.library.html) 'src/toast_html.dart';
 
 export 'src/toast_duration.dart';
 export 'src/toast_gravity.dart';
@@ -22,7 +20,7 @@ export 'src/toaster.dart';
 class EyroToast {
   /// Showing toast for specific platform
   static Future<bool> showToast({
-    @required String text,
+    required String text,
     ToastDuration duration = ToastDuration.short,
   }) async {
     return await Toast.showToast(text: text, duration: duration);
