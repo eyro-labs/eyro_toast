@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'toast_duration.dart';
 import 'toast_gravity.dart';
