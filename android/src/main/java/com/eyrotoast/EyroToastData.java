@@ -13,8 +13,8 @@ import java.util.Map;
  * Time: 21:07
  */
 class EyroToastData {
-  private String text;
-  private int duration;
+  private final String text;
+  private final int duration;
 
   EyroToastData(String text, int duration) {
     this.text = text;

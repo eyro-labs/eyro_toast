@@ -6,6 +6,8 @@ package com.eyrotoast;
 import android.content.Context;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -27,7 +29,7 @@ public class EyroToastPlugin implements MethodCallHandler {
   }
 
   @Override
-  public void onMethodCall(MethodCall call, Result result) {
+  public void onMethodCall(MethodCall call, @NonNull Result result) {
     if (call.method.equals("showToast")) {
       EyroToastData data = EyroToastData.fromObject(call.arguments);
       if (data != null) {
