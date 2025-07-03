@@ -23,6 +23,7 @@ class EyroToastData {
 
   static EyroToastData fromObject(Object arg) {
     if (arg instanceof Map) {
+      //noinspection rawtypes
       Map map = (Map) arg;
       String text = "";
       if (map.get("text") instanceof String) {
@@ -31,6 +32,7 @@ class EyroToastData {
 
       int duration = 0;
       if (map.get("duration") instanceof Integer) {
+        //noinspection ConstantConditions
         duration = (int) map.get("duration");
       }
       return new EyroToastData(
